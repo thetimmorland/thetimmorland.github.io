@@ -18,7 +18,7 @@ const Navbar = () => {
         <a
           key={idx}
           href={href}
-          className="text-lg hover:underline text-gray-light"
+          className="text-xl hover:underline text-gray-light"
         >
           {title}
         </a>
@@ -33,7 +33,9 @@ const Navbar = () => {
           <a href="/">
             <div className="flex items-center space-x-4">
               <LogoIcon className="h-10 w-10" />
-              <p className="text-gray-light text-2xl">timothy-morland.com</p>
+              <p className="text-gray-light text-2xl md:text-xl">
+                timothy-morland.com
+              </p>
             </div>
           </a>
           <div className="hidden md:block space-x-4">{navLinks}</div>
