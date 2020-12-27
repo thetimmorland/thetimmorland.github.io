@@ -33,7 +33,7 @@ const Navbar = () => {
           <a href="/">
             <div className="flex items-center space-x-4">
               <LogoIcon className="h-10 w-10" />
-              <p className="text-gray-light text-2xl md:text-xl">
+              <p className="text-gray-light text-xl md:text-2xl">
                 timothy-morland.com
               </p>
             </div>
