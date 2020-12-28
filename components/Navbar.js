@@ -28,29 +28,29 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-gray-dark">
-        <div className="flex justify-between items-center max-w-4xl mx-auto p-4">
+      <nav className="bg-gray-dark fixed w-full">
+        <div className="h-20 mx-auto p-4 flex justify-between items-center">
           <a href="/">
             <div className="flex items-center space-x-4">
               <LogoIcon className="h-10 w-10" />
-              <p className="text-gray-light text-xl md:text-2xl">
-                timothy-morland.com
-              </p>
+              <p className="text-gray-light text-2xl">timothy-morland.com</p>
             </div>
           </a>
-          <div className="hidden md:block space-x-4">{navLinks}</div>
+          <ul className="hidden md:block space-x-4">{navLinks}</ul>
           <button className="block md:hidden" onClick={toggleDrawer}>
-            <MenuIcon className="h-10 fill-current text-gray-light" />
+            <MenuIcon className="h-10 w-10 fill-current text-gray-light" />
           </button>
         </div>
       </nav>
       {drawerOpen && (
-        <div className="block md:hidden">
-          <div className="origin-top-right absolute right-2 p-2 mt-2 rounded-md shadow-lg py-1 bg-gray-dark">
-            <div className="flex flex-col items-end">{navLinks}</div>
+        <div className="block md:hidden fixed object-right-top right-4 top-24">
+          <div className="bg-gray-dark rounded-md shadow-lg p-2">
+            <ul className="flex flex-col items-end">{navLinks}</ul>
           </div>
         </div>
       )}
+      {/* empty div prevents navbar from hiding content */}
+      <div className="h-20" />
     </>
   );
 };
