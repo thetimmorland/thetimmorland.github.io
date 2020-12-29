@@ -2,7 +2,7 @@ import vsDark from "prism-react-renderer/themes/vsDark";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import classNames from "classnames";
 
-const CodeBlock = ({ children, className }) => {
+export default function CodeBlock({ children, className }) {
   // TODO: clipboard copy button
 
   const language = className.replace(/language-/, "");
@@ -30,6 +30,4 @@ const CodeBlock = ({ children, className }) => {
       )}
     </Highlight>
   );
-};
-
-export default CodeBlock;
+}

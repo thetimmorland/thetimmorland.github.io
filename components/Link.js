@@ -1,5 +1,3 @@
-const Link = ({ className, ...props }) => (
-  <a className="text-primary hover:underline" {...props} />
-);
-
-export default Link;
+export default function Link({ className, ...props }) {
+  return <a className="text-primary hover:underline" {...props} />;
+}

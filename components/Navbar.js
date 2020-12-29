@@ -1,6 +1,6 @@
 import LogoIcon from "../icons/logo.svg";
 
-const Navbar = () => {
+export default function Navbar() {
   const menuItems = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
@@ -25,6 +25,4 @@ const Navbar = () => {
       <div className="h-20" />
     </>
   );
-};
-
-export default Navbar;
+}
